@@ -4,9 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "NODE_ENV=production webpack --config ./webpack.prod.config.js --progress --colors",
+    "dev": "set NODE_ENV=development&& node index.js",
+    "build": "set NODE_ENV=production webpack --config ./webpack.prod.config.js --progress --colors",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./src/app.js"
+    "heroku-postbuild": "webpack --config webpack.prod.js --progress --colors",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
