@@ -7,7 +7,7 @@
     "dev": "set NODE_ENV=development&& node index.js",
     "build": "set NODE_ENV=production webpack --config ./webpack.prod.config.js --progress --colors",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "heroku-postbuild": "webpack --config webpack.prod.js --progress --colors",
+    "heroku-postbuild": "webpack --config webpack.prod.config.js",
     "start": "node index.js"
   },
   "repository": {
@@ -22,11 +22,6 @@
   },
   "homepage": "https://github.com/Mic-J-Lee/webpack-react#readme",
   "dependencies": {
-    "express": "^4.13.4",
-    "react": "^0.14.8",
-    "react-dom": "^0.14.8"
-  },
-  "devDependencies": {
     "babel": "^6.5.2",
     "babel-cli": "^6.6.5",
     "babel-loader": "^6.2.4",
@@ -35,12 +30,18 @@
     "babel-preset-react-hmre": "^1.1.1",
     "babel-preset-stage-0": "^6.5.0",
     "css-loader": "^0.23.1",
+    "express": "^4.13.4",
     "file-loader": "^0.8.5",
     "node-sass": "^3.4.2",
+    "react": "^0.14.8",
+    "react-dom": "^0.14.8",
     "sass-loader": "^3.2.0",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.6",
     "webpack": "^1.12.14",
+    "webpack-merge": "^4.1.1"
+  },
+  "devDependencies": {
     "webpack-dev-middleware": "^1.6.1",
     "webpack-hot-middleware": "^2.10.0",
     "webpack-merge": "^4.1.1"
