@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "set NODE_ENV=development&& node index.js",
-    "build": "set NODE_ENV=production webpack --config ./webpack.prod.config.js --progress --colors",
+    "build": "set NODE_ENV=production webpack --config ./webpack.prod.config.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "heroku-postbuild": "webpack --config webpack.prod.config.js --progress --colors",
     "start": "node index.js"
